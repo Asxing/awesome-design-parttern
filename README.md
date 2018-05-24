@@ -1,4 +1,6 @@
-一些设计模式的思考：
+### 工厂模式
+
+工厂设计模式的思考：
 
 #### 简单工厂和工厂方法差异？
 
@@ -20,4 +22,47 @@
 - 依赖反转原理（dependency inversion principle）
 - 控制反转（inversion of control）
 - 依赖注入（dependency injection）
+
+### 单例模式
+
+- 单例模式限制类的实例化，保证JVM中的类的实例只有一个
+- 单例类提供一个可以全局访问单例的入口
+- 常用于
+  - 日志logging
+  - 配置设置类
+  - 驱动程序对象
+  - 缓存对象
+  - 线程池对象
+- 其中会涉及JAVA面试题
+  - 提前和延迟（lazy）
+  - 静态初始化块
+  - 多线程安全
+  - 双重检查锁定（double checked locking）
+  - JVM、JIT指令优化重排
+  - 反射（reflection）
+  - 序列化（serialization）
+  - 克隆（clone）
+
+单例模式：
+
+- 普通的懒汉模式
+- 饿汉模式
+- 同步饿汉模式
+- 比尔普夫模式
+- 枚举模式
+
+破坏单例模式：
+
+- 反射破坏
+- 防止，就是构造方法抛异常
+
+单例模式的应用：
+
+- Core Java
+  - java.lang.Runtime
+  - java.awt.Desktop
+- Spring 容器
+  - Singleton Scope（per container）
+
+破坏单例模式的方法：
 
