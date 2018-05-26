@@ -90,3 +90,70 @@
 - 构建者模式是规定一个产品的生产过程中的具体细节
   - 最终只会构建出来一个产品
   - 建造者模式是创建负载对象的一种分解方式
+
+### 流畅构建者模式
+
+问题域：
+
+- 传统的构建者模式在实际的场景中应用不多
+- 流畅接口Fluent Interface实际场景中常用
+  - 方法级联（Method Cascading /Chaining）
+  - 事实上的Builder模式
+- 不可变（immutability）对象需求
+  - 不容易出Bug
+  - 多线程安全
+
+#### 构造对象实例的传统方式
+
+- 构造函数（Telesoping Constructor Pattern）
+- Setter 方法（JavaBeans Pattern）
+- 工厂
+
+#### 显微镜构造函数模式
+
+- 罗列各种参数组合复杂繁琐
+- 扩展字段，增加构造函数方法
+- 构造函数，参数位置，重载哟
+
+#### JavaBean 模式
+
+- 使用一堆的Setter和Getter方法
+- 状态可变，一致性保证
+  - 应为使用setter，不能保证最终的值是否一致
+  - 潜在一致性问题
+- 多线程安全
+
+#### 流畅接口模式
+
+- 所有的字段都是final，事先定义好
+- 构造函数是私有的，
+- 全部都是getter方法，没有setter方法
+- 使用一个BeanBuilder实体，并且实体字段也是final可自定义选择
+- 每一个方法设置参数完成以后返回的都是自己BeanBuilder
+- 最后定义一个Builder方法，代表产品要出炉了，把自己的BeanBuilder实体传入其中，返回Bean实体
+- 之后可以进行一些验证操作，返回Bean
+
+#### 优点
+
+- 参数组合更加灵活
+- 参数设置直观表意
+- 一个构造函数实例可以构造多个对象表示
+- 构造出不可变对象（immutable Object）
+
+#### 应用：
+
+- Core Java
+  - java.lang.StringBuilder#append()
+  - java.lang.StringBuffer#append()
+  - java.nio.ByteBuffer#put()
+- Spring Framework
+  - EmbeddedDataBuilder
+  - AuthenticationManagerBuilder
+  - UriComponentsBuilder
+  - MockMvcWebClientBuilder
+
+Fluent 接口模式有啥不足？适用于什么样的场景?
+
+- Bean 构造方法是私有的，意味着该类不能在客户端代码里直接实例化
+- 改立现在有事不可变的了，所有属性嗾使`final`类型的，在构造方法里面被赋值，另外我们只为他们提供了getter方法
+- builder类使用了构造方法只接受必须属性，为了确保这些属性在构造方法里赋值，只有这些属性被定义成final类型。
