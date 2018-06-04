@@ -502,3 +502,40 @@ Log日志
 #### 优化：
 
 抽取公共功能到抽象超类
+
+### 命令模式
+
+#### 定义：
+
+- `行为请求者` 和 `行为实现者` 通常呈现一种紧耦合
+- 将一组行为抽象为对象，实现二者之间的松耦合，这就是命令模式
+
+#### 元素：
+
+- Command：用于执行一个行为的接口
+- ConcreteConmand：将行为的执行者和行为的调用者进行绑定，该对象负责执行Receiver上的操作
+- Client：创建ConcreteCommand对象并设置其Receiver
+- Invoker：使用Command对象执行请求
+- Receiver：包含实际的行为操作逻辑
+
+#### 优点：
+
+- 调用者和接受者之间通过Command解耦
+- 增加Command不需要修改现有的代码，易于扩展
+
+#### 缺点：
+
+- 可能会搞出一堆command
+
+#### 应用：
+
+- java.lang.Runable
+- java.swing.Action
+- strcts Action
+- Netflix hystrix Command
+
+![1528075303580](source/images/1528075303580.png)
+
+#### 命令模式和责任链模式的区别：
+
+- 
