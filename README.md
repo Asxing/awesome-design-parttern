@@ -638,3 +638,30 @@ Log日志
 
 - 使用工厂模式封装具体策略的创建逻辑
 - 策略模式和模板方法模式的差异
+
+### 观察者模式
+
+#### 定义
+
+- 观察者模式定义了对象间的一种一种一对多依赖，当一个对象发生改变状态时，所有依赖的对象会受到通知并自动更新
+- 也成为发布者-订阅者（publisher-subscribe）模式
+
+#### 元素：
+
+- 主题接口
+- 具体的主题的实现，操作
+- 观察者接口
+- 具体的观察者实现者
+
+#### 优势:
+
+- subject 和 object 之间解耦
+- 支持广播
+
+#### 应用：
+
+- java.util.Observer 、java.util.Observable
+- Swing中的java.util.EventListener
+- Spring中的`ApplicationListener/ApplicationEvent`
+- JMS
+- MVC framework
