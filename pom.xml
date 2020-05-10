@@ -13,6 +13,7 @@
         <module>structure</module>
         <module>behavior</module>
         <module>dependency-inversion</module>
+        <module>head-first</module>
     </modules>
 
     <name>design-parttern</name>
