@@ -1,4 +1,4 @@
-package com.holddie.design.headfirst.chapter01.v4;
+package com.holddie.design.headfirst.strategyMode01.v4;
 
 public abstract class Duck {
 	FlyBehavior flyBehavior;

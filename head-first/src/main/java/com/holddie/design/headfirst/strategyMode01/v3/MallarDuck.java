@@ -1,4 +1,4 @@
-package com.holddie.design.headfirst.chapter01.v3;
+package com.holddie.design.headfirst.strategyMode01.v3;
 
 public class MallarDuck extends Duck implements Flyable {
 

@@ -1,4 +1,4 @@
-package com.holddie.design.headfirst.chapter01.v1;
+package com.holddie.design.headfirst.strategyMode01.v2;
 
 public abstract class Duck {
 	public void quack() {
@@ -11,4 +11,7 @@ public abstract class Duck {
 
 	public abstract void display();
 
+	public void fly() {
+		System.out.println("duck fly ...");
+	}
 }

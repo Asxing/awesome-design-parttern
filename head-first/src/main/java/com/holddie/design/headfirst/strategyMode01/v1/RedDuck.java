@@ -1,10 +1,6 @@
-package com.holddie.design.headfirst.chapter01.v4;
+package com.holddie.design.headfirst.strategyMode01.v1;
 
 public class RedDuck extends Duck {
-
-	public RedDuck() {
-		this.flyBehavior = new FlyNoWay();
-	}
 
 	@Override
 	public void display() {

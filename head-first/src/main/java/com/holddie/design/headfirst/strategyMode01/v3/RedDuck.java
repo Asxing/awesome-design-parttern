@@ -1,4 +1,4 @@
-package com.holddie.design.headfirst.chapter01.v1;
+package com.holddie.design.headfirst.strategyMode01.v3;
 
 public class RedDuck extends Duck {
 
