@@ -27,7 +27,7 @@ hs_err_pid*
 .idea/
 *.iml
 *.ser
-target/
+*target/
 workspace
 .project
 .classpath
