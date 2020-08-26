@@ -1,7 +1,10 @@
 package com.holddie.design.singleton;
 
+import java.util.concurrent.atomic.AtomicLong;
+
 /**
  * 枚举单例
+ *
  * @author yangze1
  * @version 1.0.0
  * @email holddie@163.com
@@ -10,14 +13,19 @@ package com.holddie.design.singleton;
 public enum Singleton07 {
     INSTANCE;
 
-    public void method() {
-        System.out.println("singleton method call...");
+    private AtomicLong id = new AtomicLong(0);
+
+    public long getId() {
+        return id.incrementAndGet();
     }
 }
 
 
 class TestEnumSingleton{
     public static void main(String[] args) {
-        Singleton07.INSTANCE.method();
+        System.out.println(Singleton07.INSTANCE.getId());
+        System.out.println(Singleton07.INSTANCE.getId());
+        System.out.println(Singleton07.INSTANCE.getId());
+        System.out.println(Singleton07.INSTANCE.getId());
     }
 }

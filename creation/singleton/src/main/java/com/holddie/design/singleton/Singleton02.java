@@ -16,8 +16,7 @@ public class Singleton02 {
     static {
         try {
             INSTANCE = new Singleton02();
-        } catch (Exception e
-                ) {
+        } catch (Exception e) {
             throw new RuntimeException(" error! ");
         }
     }
