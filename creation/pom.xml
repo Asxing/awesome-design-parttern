@@ -16,10 +16,6 @@
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
     <modules>
-        <module>simple-factory</module>
-        <module>fatory-method</module>
-        <module>abstract-factory</module>
-        <module>singleton</module>
         <module>classic-builder</module>
         <module>fluent-builder</module>
     </modules>
