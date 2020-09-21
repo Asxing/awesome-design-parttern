@@ -16,12 +16,6 @@
     <!-- FIXME change it to the project's website -->
     <url>http://www.example.com</url>
     <modules>
-        <module>structure-adapter</module>
-        <module>structure-bridge</module>
-        <module>structure-composite</module>
-        <module>structure-decorate</module>
-        <module>structure-facade</module>
-        <module>structure-proxy</module>
     </modules>
 
     <properties>
@@ -31,12 +25,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.11</version>
-            <scope>test</scope>
-        </dependency>
+        
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
